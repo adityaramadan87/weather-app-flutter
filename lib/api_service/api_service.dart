@@ -4,7 +4,7 @@ import 'package:weather_app_flutter/dart_object/open_weather.dart';
 import 'package:weather_app_flutter/dart_object/forecasts.dart';
 
 Future<Stream<OpenWeather>> getWeather() async {
-  final String url = 'https://api.openweathermap.org/data/2.5/weather?q=Jakarta&appid=d0d7a0d307b90d0f9cc936e98ce50667&units=metric';
+  final String url = 'https://api.openweathermap.org/data/2.5/weather?q=Jakarta&appid=<YOUR_API_KEY>&units=metric';
 
   final client = new http.Client();
   final streamedRest = await client.send(
@@ -19,7 +19,7 @@ Future<Stream<OpenWeather>> getWeather() async {
 }
 
 Future<Stream<Forecasts>> getForecast() async {
-  final String urlForecast = 'http://api.openweathermap.org/data/2.5/forecast?q=Jakarta&appid=d0d7a0d307b90d0f9cc936e98ce50667&units=metric';
+  final String urlForecast = 'http://api.openweathermap.org/data/2.5/forecast?q=Jakarta&appid=<YOUR_API_KEY>&units=metric';
   
   final client = new http.Client();
   final streamedRest = await client.send(
